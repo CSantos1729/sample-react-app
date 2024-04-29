@@ -11,7 +11,7 @@ export const getSeismicData = async (city: string): Promise<SeismicData> => {
           city: city,
           magnitute: res.data.magnitute,
           latitude: res.data.latitude,
-          longitude: res.data.rain,
+          longitude: res.data.longitude,
         });
       })
       .catch((error) => {
