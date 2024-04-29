@@ -9,7 +9,7 @@ import {
   } from "@nextui-org/react";
   import { useState } from "react";
   import { TiWeatherDownpour, TiWeatherSunny } from "react-icons/ti";
-  import { getSeismicData } from "../api/actions";
+  import { getSeismicData } from "../api/actions2";
   
   const SeismicCard: React.FC = () => {
     const [data, setData] = useState<SeismicData>();
