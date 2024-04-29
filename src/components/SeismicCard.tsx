@@ -74,9 +74,9 @@ import {
               <h1 className="text-3xl font-bold">{data.city}</h1>
               
               
-              <p className="text-lg">Magnitute: {data.magnitute}%</p>
-              <p className="text-lg">latitude: {data.latitude} km/h</p>
-              <p className="text-lg">longitude: {data.longitude} %</p>
+              <p className="text-lg">Magnitute: {data.magnitute}°</p>
+              <p className="text-lg">latitude: {data.latitude} °</p>
+              <p className="text-lg">longitude: {data.longitude} °</p>
             </div>
           </CardBody>
         ) : (
