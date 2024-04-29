@@ -1,6 +1,6 @@
 import axios, { AxiosError } from "axios";
 
-const API_URL = "https://65ca483b3b05d29307e01640.mockapi.io/api/seismic/";
+const API_URL = "https://65ca483b3b05d29307e01640.mockapi.io/api/";
 
 export const getSeismicData = async (city: string): Promise<SeismicData> => {
   return new Promise<SeismicData>((resolve, reject) => {
