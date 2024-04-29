@@ -1,18 +1,18 @@
 import axios, { AxiosError } from "axios";
 
-const API_URL = "https://fantastic-fiesta-qrxjqx465gv29r99-3000.app.github.dev/api";
+const API_URL = "https://65ca483b3b05d29307e01640.mockapi.io/api/seismic/";
 
-export const getWeatherData = async (city: string): Promise<WeatherData> => {
-  return new Promise<WeatherData>((resolve, reject) => {
+export const getSeismicData = async (city: string): Promise<SeismicData> => {
+  return new Promise<SeismicData>((resolve, reject) => {
     axios
-      .get(`${API_URL}/weather/${city}`)
+      .get(`${API_URL}/seismic/${city}`)
       .then((res) => {
         resolve({
           city: city,
           temperature: res.data.temperature,
-          humidity: res.data.humidity,
-          wind: res.data.wind,
-          rain: res.data.rain,
+          magnitute: res.data.magnitute,
+          latitude: res.data.latitude,
+          longitude: res.data.rain,
         });
       })
       .catch((error) => {
@@ -31,5 +31,3 @@ export const getWeatherData = async (city: string): Promise<WeatherData> => {
       });
   });
 };
-
-
