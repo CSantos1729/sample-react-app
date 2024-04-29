@@ -8,7 +8,6 @@ interface WeatherData {
 
 interface SeismicData {
   city: string;
-  temperature: number;
   magnitute: number;
   latitude: number;
   longitude: number;
