@@ -12,3 +12,11 @@ interface SeismicData {
   latitude: number;
   longitude: number;
 }
+
+interface DaysData {
+  city: string;
+  dayOne: number;
+  dayTwo: number;
+  dayThree: number;
+  
+}

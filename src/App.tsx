@@ -2,6 +2,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import SeismicCard from "./components/SeismicCard";
 import WeatherCard from "./components/WeatherCard";
+import DaysCard from "./components/DaysCard";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <div className="flex flex-1 overflow-auto flex-row items-centre align-centre justify-centre h-full w-full">
         <WeatherCard />
         <SeismicCard />
+        <DaysCard />
         
       </div>
     </div>
