@@ -1,12 +1,12 @@
-import { Navbar, NavbarBrand, NavbarContent } from "@nextui-org/react";
+import { Button, Link, Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react";
 import { MdApi } from "react-icons/md";
 
 const NavBar = () => {
   return (
-    <Navbar className="bg-slate-100 h-16">
+    <Navbar className="bg-slate-800 h-12">
       <NavbarBrand>
         <MdApi className="w-8 h-8 text-primary" />
-        <p className="font-bold text-inherit">Weather API</p>
+        <p className="font-bold text-inherit">Universe API</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {/* <NavbarItem>
@@ -25,7 +25,7 @@ const NavBar = () => {
           </Link>
         </NavbarItem> */}
       </NavbarContent>
-      {/* <NavbarContent justify="end">
+      <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
           <Link href="#">Login</Link>
         </NavbarItem>
@@ -34,7 +34,7 @@ const NavBar = () => {
             Sign Up
           </Button>
         </NavbarItem>
-      </NavbarContent> */}
+      </NavbarContent>
     </Navbar>
   );
 };
