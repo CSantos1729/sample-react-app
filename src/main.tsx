@@ -13,7 +13,11 @@ const BackgroundApp: React.FC<BackgroundAppProps> = ({ backgroundImage }) => (
     <NextUIProvider className="h-[400vh]">
       <main
         className="dark text-foreground bg-background"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "cover", 
+          backgroundRepeat: "no-repeat", 
+        }}
       >
         <App />
       </main>

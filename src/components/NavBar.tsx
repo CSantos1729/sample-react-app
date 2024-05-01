@@ -23,7 +23,7 @@ const NavBar = () => {
           <Link color="foreground" href="#">
             Integrations
           </Link>
-        </NavbarItem> */}
+        </NavbarItem> 
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
@@ -33,7 +33,7 @@ const NavBar = () => {
           <Button as={Link} color="primary" href="#" variant="flat">
             Sign Up
           </Button>
-        </NavbarItem>
+        </NavbarItem>*/}
       </NavbarContent>
     </Navbar>
   );
