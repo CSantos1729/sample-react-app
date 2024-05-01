@@ -40,7 +40,8 @@ const WeatherCard: React.FC = () => {
 
   return (
     <Card className="max-w-[400px]">
-      <CardHeader className="flex gap-3">
+      <CardHeader className="flex justify-center items-center flex-col">
+      <h1 className="text-2xl font-bold">Earth Weather</h1> 
         <form
           onSubmit={(e) => {
             e.preventDefault();

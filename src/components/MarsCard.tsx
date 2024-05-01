@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { Card, CardHeader, CardBody, CardFooter, Divider, Input, Button } from "@nextui-org/react";
-import { getSpaceWeatherData } from "../api/actions4"; // Assuming you have a function to fetch space weather data
+import { getMarsWeatherData } from "../api/actions5";
 
-const SpaceWeatherCard: React.FC = () => {
-  const [data, setData] = useState<SpaceWeatherData>();
+const MarsWeatherCard: React.FC = () => {
+  const [data, setData] = useState<MarsWeatherData>();
   const [loadingState, setLoadingState] = useState(false);
   const [error, setError] = useState("");
-  const [date, setDate] = useState(""); // Additional state to input date
+  const [sol, setSol] = useState(""); // Additional state to input sol
 
   const handleSearch = () => {
     setLoadingState(true);
-    getSpaceWeatherData(date)
+    getMarsWeatherData(3000)
       .then((res) => {
         setError("");
         setData(res);
@@ -27,15 +27,15 @@ const SpaceWeatherCard: React.FC = () => {
   return (
     <Card className="max-w-[400px]">
       <CardHeader className="flex justify-center items-center flex-col">
-        <h1 className="text-2xl font-bold">Space Weather</h1>
+      <h1 className="text-2xl font-bold">Mars Weather</h1>
         <form onSubmit={(e) => { e.preventDefault(); handleSearch(); }}>
           <div className="flex flex-col w-full p-2 space-y-4">
             <Input
-              id="date"
-              type="date"
-              label="Date"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
+              id="sol"
+              type="number"
+              label="Sol"
+              value={sol}
+              onChange={(e) => setSol(e.target.value)}
             />
             <Button color="primary" isLoading={loadingState} type="submit">
               Search
@@ -47,16 +47,18 @@ const SpaceWeatherCard: React.FC = () => {
       {data ? (
         <CardBody>
           <div className="flex flex-col items-center">
-            <p className="text-lg">Date: {data.date}</p>
-            <p className="text-lg">Solar Wind Speed: {data.solarWindSpeed} km/s</p>
-            <p className="text-lg">Geomagnetic Storm: {data.geomagneticStorm}</p>
-            {/* Add more space weather data fields here */}
+            <h1 className="text-3xl font-bold">Mars Weather</h1>
+            <p className="text-lg">Sol: {data.sol}</p>
+            <p className="text-lg">Temperature: {data.temperature}°C</p>
+            <p className="text-lg">Pressure: {data.pressure} Pa</p>
+            <p className="text-lg">Wind Speed: {data.wind} m/s</p>
+            {/* Add more Mars weather data fields here */}
           </div>
         </CardBody>
       ) : (
         <CardBody>
           <div className="flex flex-col items-center">
-            <p className="text-xl font-bold">Please select a date</p>
+            <p className="text-xl font-bold">Please enter a Sol</p>
           </div>
         </CardBody>
       )}
@@ -72,4 +74,4 @@ const SpaceWeatherCard: React.FC = () => {
   );
 };
 
-export default SpaceWeatherCard;
+export default MarsWeatherCard;

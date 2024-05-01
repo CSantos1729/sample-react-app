@@ -13,11 +13,16 @@ interface SeismicData {
   longitude: number;
 }
 
-interface DaysData {
-  city: string;
-  dayOne: number;
-  dayTwo: number;
-  dayThree: number;
+interface PlanetData {
+  planet: string;
+  mercury: number; 
+  venus: number; 
+  earth: number; 
+  mars: number;
+  jupiter: number; 
+  saturn: number; 
+  uranus: number; 
+  neptune: number; 
   
 }
 
@@ -25,5 +30,13 @@ interface SpaceWeatherData {
   date: string;
   solarWindSpeed: number;
   geomagneticStorm: number;
-  // Add more fields as needed based on the response from your API
+  
+}
+
+interface MarsWeatherData {
+  sol: number;
+  temperature: number;
+  pressure: number;
+  wind: number;
+  
 }
