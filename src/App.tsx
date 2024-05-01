@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 import SeismicCard from "./components/SeismicCard";
 import WeatherCard from "./components/WeatherCard";
 import DaysCard from "./components/DaysCard";
-
+import SpaceWeatherCard from "./components/SpaceWeatherCard";
 const App = () => {
   return (
     <div className="flex flex-col h-screen">
@@ -12,6 +12,7 @@ const App = () => {
         <WeatherCard />
         <SeismicCard />
         <DaysCard />
+        <SpaceWeatherCard/>
         
       </div>
     </div>
